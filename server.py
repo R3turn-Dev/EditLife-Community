@@ -1,1 +1,4 @@
-from el_engine import *
+from el_engine import Web
+
+
+Web.run()
