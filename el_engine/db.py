@@ -1,5 +1,13 @@
 from psycopg2 import connect
 from threading import get_ident
+from .exceptions import DBEngineNotFound
+
+
+def engineSelect(engine):
+    if engine in locals().keys():
+        return locals()[engine]
+    else:
+        raise DBEngineNotFound
 
 
 class PostgreSQL:
