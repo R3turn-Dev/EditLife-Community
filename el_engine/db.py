@@ -4,8 +4,8 @@ from .exceptions import DBEngineNotFound
 
 
 def engineSelect(engine):
-    if engine in locals().keys():
-        return locals()[engine]
+    if engine in globals().keys():
+        return globals()[engine]
     else:
         raise DBEngineNotFound
 
