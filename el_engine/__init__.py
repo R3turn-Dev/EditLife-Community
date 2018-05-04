@@ -1,4 +1,6 @@
 from .settings import SettingManager as SettingMan
+from .db import engineSelect
+from .web import FlaskEngine
 
 _setting_man = SettingMan()
 _setting = _setting_man.get()
@@ -9,8 +11,9 @@ DB_Profile = _setting.Engine[DB_Engine]
 Web_Engine = _setting.Preferences['Web_Engine']
 Web_Profile = _setting.Engine[Web_Engine]
 
-from .db import engineSelect
 DB = engineSelect(DB_Engine)
+
+Web = FlaskEngine(Web_Profile)
 
 print("""[ Profiles ]\n{}\n{}\n{}\n{}""".format(
     "  + DB Profile : " + DB_Engine,
