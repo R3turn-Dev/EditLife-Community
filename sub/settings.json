@@ -1,0 +1,21 @@
+{
+  "Preferences": {
+    "DB_Engine": "PgSQL",
+    "Web_Engine": "Flask"
+  },
+  "Engine": {
+    "PgSQL": {
+      "host": "0.0.0.0",
+      "port": 5432,
+      "user": "postgres",
+      "pw": "",
+      "db": "el-community"
+    },
+    "Flask": {
+      "host": "0.0.0.0",
+      "port": 80,
+      "threaded": true,
+      "debug": false
+    }
+  }
+}
