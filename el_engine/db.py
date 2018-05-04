@@ -3,18 +3,14 @@ from threading import get_ident
 
 
 class PostgreSQL:
-    def __init__(self, config, initial_connect=True):
+    def __init__(self, initial_connect=True, **kwargs):
+        self.__dict__ = kwargs
+
         self.conn = None
         self.cursor = None
 
         self.connDict = {}
         self.curDict = {}
-
-        self.host = config.get('host')
-        self.port = config.get('post')
-        self.db = config.get('db')
-        self.user = config.get('user')
-        self.pw = config.get('pw')
 
         if initial_connect:
             self.getConn()
