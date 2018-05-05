@@ -24,8 +24,6 @@ for each in Blueprints:
     )
     _registered[each.parent.name] = each.parent.description
 
-print(Web.app.blueprints)
-
 print("""[ Profiles ]\n{}\n{}\n{}\n{}\n{}{}\n{}""".format(
     "  + DB Profile : " + DB_Engine,
     "\n".join(["{:>10} : {:5}".format(" - "+k, repr(v)) for k, v in DB_Profile.items()]),
