@@ -19,16 +19,16 @@ class FlaskEngine():
 
 
 class SingleWebPage:
-    def __init__(self, name=None, route=None, description=None, *args, **kwargs):
+    def __init__(self, name=None, route_path=None, description=None, *args, **kwargs):
         self.name = name
-        self.route = route
+        self.route_path = route_path
         self.description = description
 
         if "name" in kwargs.keys(): self.name = kwargs['name']; del kwargs['name']
         if "route" in kwargs.keys(): self.name = kwargs['route']; del kwargs['route']
         if "description" in kwargs.keys(): self.name = kwargs['description']; del kwargs['description']
 
-        self.bp = Blueprint(*args, **kwargs)
+        self.bp = Blueprint(name, __name__, *args, **kwargs)
 
     def extract(self):
         return self.bp

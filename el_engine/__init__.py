@@ -1,6 +1,7 @@
 from .settings import SettingManager as SettingMan
 from .db import engineSelect
 from .web import FlaskEngine
+from .webpage import Blueprints
 
 _setting_man = SettingMan()
 _setting = _setting_man.get()
@@ -15,9 +16,17 @@ DB = engineSelect(DB_Engine)
 
 Web = FlaskEngine(Web_Profile)
 
-print("""[ Profiles ]\n{}\n{}\n{}\n{}""".format(
+for each in Blueprints:
+    Web.register_blueprint(
+        each.parent.extract(),
+        url_prefix=each.parent.route_path
+    )
+
+print("""[ Profiles ]\n{}\n{}\n{}\n{}\n{}{}""".format(
     "  + DB Profile : " + DB_Engine,
     "\n".join(["{:>10} : {:5}".format(" - "+k, repr(v)) for k, v in DB_Profile.items()]),
     "  + Web Profile : " + Web_Engine,
-    "\n".join(["{:>10} : {:5}".format(" - "+k, repr(v)) for k, v in Web_Profile.items()])
+    "\n".join(["{:>10} : {:5}".format(" - "+k, repr(v)) for k, v in Web_Profile.items()]),
+    "  + Detected blueprints : ",
+    len(Blueprints)
 ))
