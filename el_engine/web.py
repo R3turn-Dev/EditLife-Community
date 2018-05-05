@@ -24,6 +24,7 @@ class SingleWebPage:
         self.route_path = route_path
         self.description = description
 
+        # TODO: conflicted variable name 
         if "name" in kwargs.keys(): self.name = kwargs['name']; del kwargs['name']
         if "route" in kwargs.keys(): self.name = kwargs['route']; del kwargs['route']
         if "description" in kwargs.keys(): self.name = kwargs['description']; del kwargs['description']
