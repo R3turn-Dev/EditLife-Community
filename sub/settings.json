@@ -1,7 +1,8 @@
 {
   "Preferences": {
     "DB_Engine": "PostgreSQL",
-    "Web_Engine": "Flask"
+    "Web_Engine": "Flask",
+    "Template_path": ""
   },
   "Engine": {
     "PostgreSQL": {
