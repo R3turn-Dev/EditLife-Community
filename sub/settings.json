@@ -1,10 +1,10 @@
 {
   "Preferences": {
-    "DB_Engine": "PgSQL",
+    "DB_Engine": "PostgreSQL",
     "Web_Engine": "Flask"
   },
   "Engine": {
-    "PgSQL": {
+    "PostgreSQL": {
       "host": "0.0.0.0",
       "port": 5432,
       "user": "postgres",
