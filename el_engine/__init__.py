@@ -16,17 +16,22 @@ DB = engineSelect(DB_Engine)
 
 Web = FlaskEngine(Web_Profile)
 
+_registered = {}
 for each in Blueprints:
     Web.register_blueprint(
         each.parent.extract(),
         url_prefix=each.parent.route_path
     )
+    _registered[each.parent.name] = each.parent.description
 
-print("""[ Profiles ]\n{}\n{}\n{}\n{}\n{}{}""".format(
+print(Web.app.blueprints)
+
+print("""[ Profiles ]\n{}\n{}\n{}\n{}\n{}{}\n{}""".format(
     "  + DB Profile : " + DB_Engine,
     "\n".join(["{:>10} : {:5}".format(" - "+k, repr(v)) for k, v in DB_Profile.items()]),
     "  + Web Profile : " + Web_Engine,
     "\n".join(["{:>10} : {:5}".format(" - "+k, repr(v)) for k, v in Web_Profile.items()]),
     "  + Detected blueprints : ",
-    len(Blueprints)
+    len(Web.app.blueprints),
+    "\n".join(["     {:>10} {:>10}".format(name, desc) for name, desc in _registered.items()])
 ))
