@@ -24,10 +24,9 @@ class SingleWebPage:
         self.route_path = route_path
         self.description = description
 
-        # TODO: conflicted variable name 
         if "name" in kwargs.keys(): self.name = kwargs['name']; del kwargs['name']
-        if "route" in kwargs.keys(): self.name = kwargs['route']; del kwargs['route']
-        if "description" in kwargs.keys(): self.name = kwargs['description']; del kwargs['description']
+        if "route" in kwargs.keys(): self.route = kwargs['route']; del kwargs['route']
+        if "description" in kwargs.keys(): self.description = kwargs['description']; del kwargs['description']
 
         self.bp = Blueprint(name, __name__, *args, **kwargs)
 
