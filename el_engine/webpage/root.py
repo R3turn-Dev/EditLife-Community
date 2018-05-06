@@ -13,4 +13,4 @@ class Root():
 
         @self.parent.bp.route('/')
         def root(*args, **kwargs):
-            return repr(session.items())
+            return render_template("/root/index.html")
