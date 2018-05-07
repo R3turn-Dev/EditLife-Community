@@ -6,6 +6,8 @@ Author: R3turnDev (return0927)
 html, body {
     height: 100%;
     margin: 0;
+
+    font-family: 'Nanum Square', sans-serif;
 }
 
 .pc {
@@ -16,10 +18,53 @@ html, body {
     text-align: center;
 }
 
+div.login {
+    position: absolute;
+    float: right;
+    right: 20px;
+
+    min-height: 30px;
+
+    font-size: .75em;
+}
+
+div.login input {
+    height: 15px;
+    width: calc(15px * 7.07);
+}
+
+div.login input {
+    margin-right: 10px;
+}
+
+div.login input:nth-last-child(1) {
+    margin-right: 5px;
+}
+
+div.login i {
+    font-size: 1.5em;
+}
+
+#login-form div {
+    display: inline-block;
+    min-height: 30px;
+
+    padding: 7px 0;
+}
+
+#login-form > div:last-child {
+    padding: 8px 0;
+}
+
+.center {
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .intro .center {
     position: relative;
-    top: 50%;
-    transform: translateY(50%);
+    padding: 32.5vh 0;
 
     text-align: center;
 }
@@ -28,17 +73,73 @@ html, body {
     background-color: aliceblue;
 }
 
-.intro #introduce {
-    max-width: 40%;
-    height: auto;
+#introduce {
+    position: relative;
+    height: 35vh;
+    width: calc(35vh/9*16);
 }
 
 .fullscreen {
     min-height: 100%;
 }
 
+.horizontal-list {
+    display: inline;
+}
+
+/*.horizontal-list > * {
+    display: inline;
+}*/
+
+.intro .content {
+    font-size: 1.5em;
+}
+
+.content .main-text {
+    font-size: 1.2em;
+}
+
+header.pc {
+    padding: 15px 0;
+    min-height: 100px;
+}
+
+nav {
+    margin: 5px auto;
+    
+    height: 41px;
+
+    vertical-align: middle;
+    
+    background-color: mediumpurple;
+}
+
+nav > a {
+    display: inline-block;
+    width: 200px;
+    max-height: 40px;
+
+    padding: 9px 0;
+
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav > a:hover {
+    background-color: rebeccapurple;
+}
+
+nav > a.menu-ico {
+    max-width: 40px;
+}
+
+
 .footer {
-    min-height: 50px;
+    min-height: 30px;
     bottom: 0;
     background-color: whitesmoke;
+
+    padding-top: 5px;
+    font-size: 15px;
 }

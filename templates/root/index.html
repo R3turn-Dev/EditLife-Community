@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <title>EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="title" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티" />
-    <meta name="publisher" content="EL : Edit Life" />
-    <meta name="author" content="EL : Edit Life" />
-    <meta name="robots" content="index,follow" />
-    <meta name="keywords" content="트위치, 영상편집, 유튜브, 크리에이터, 트수만성, 에딧라이프, Edit Life, EL" />
-    <meta name="description" content="유튜브와 트위치 플랫폼에서 활동하는 크레이어터 및 스트리머분들과 영상편집을 하시는 분들의 커뮤니티입니다." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티" />
-    <meta property="og:site_name" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티" />
-    <meta property="og:author" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티" />
-    <meta property="og:type" content="" />
+    <meta name="title" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+    <meta name="publisher" content="EL : Edit Life"/>
+    <meta name="author" content="EL : Edit Life"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="트위치, 영상편집, 유튜브, 크리에이터, 트수만성, 에딧라이프, Edit Life, EL"/>
+    <meta name="description" content="유튜브와 트위치 플랫폼에서 활동하는 크레이어터 및 스트리머분들과 영상편집을 하시는 분들의 커뮤니티입니다."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="og:title" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+    <meta property="og:site_name" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+    <meta property="og:author" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+    <meta property="og:type" content=""/>
     <!-- <meta property="og:image" content="Site Representitive image" /> -->
-    <meta property="og:description" content="유튜브와 트위치 플랫폼에서 활동하는 크레이어터 및 스트리머분들과 영상편집을 하시는 분들의 커뮤니티입니다." />
+    <meta property="og:description" content="유튜브와 트위치 플랫폼에서 활동하는 크레이어터 및 스트리머분들과 영상편집을 하시는 분들의 커뮤니티입니다."/>
     <!-- <meta property="og:url" content="Site Domain" /> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/df655a799cdbfe977ae05f6cf484e77ec76b3312/nanumsquare.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
 <!--
@@ -34,16 +38,47 @@
 </header> -->
 <div class="page fullscreen intro">
     <div class="center">
-        <video id="introduce" autoplay muted>
-            <source src="media/ryu.mp4" type="video/mp4">
-        </video>
+        <div class="horizontal-list">
+            <div class="content">
+                <iframe id="introduce"
+                        src="https://www.youtube.com/embed/LS2WJ1AwjzA?rel=0&amp;controls=0&amp;showinfo=0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </div>
 <div class="page fullscreen">
-    <label>여기에 커뮤니티</label>
+    {% if not is_mobile %}<header class="pc header">
+        <div class="login">
+            <form id="login-form">
+                <div class="id">
+                    <label for="form-id">아이디</label>
+                    <input type="text" name="id" id="form-id" />
+                </div>
+                <div class="pw">
+                    <label for="form-pw">비밀번호</label>
+                    <input type="password" name="pw" id="form-pw" />
+                </div>
+                <div><i class="fa fa-sign-in"></i></div>
+            </form>
+        </div>
+        <div class="center"><img src="media/logo.png" height="100px"></div>
+    </header>
+    <div class="menu">
+        <nav>
+            <a class="menu-ico" href="/" style="background-color: #b592ff"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a class="menu-a" href="/board/notice">공지사항</a>
+            <a class="menu-a" href="/board/workplace">구인 / 구직</a>
+            <a class="menu-a" href="/board/tip">편집 TIP</a>
+            <a class="menu-a" href="/board/lecture">편집 강의</a>
+        </nav>
+    </div>
+    {% else %}<header class="mobile header">
+        Mobile 준비중
+    </header>{% endif %}
 </div>
 <div class="footer">
-    <label></label>
+    <div class="center"><label> Copyright ⓒ 2018 by [EL] Edit Life All Rights Reserved. </label></div>
 </div>
 
 </body>
