@@ -1,0 +1,44 @@
+/*
+Created At: 2018-05-06 16:28 KST
+Author: R3turnDev (return0927)
+ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.pc {
+}
+
+.page {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.intro .center {
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+
+    text-align: center;
+}
+
+.intro {
+    background-color: aliceblue;
+}
+
+.intro #introduce {
+    max-width: 40%;
+    height: auto;
+}
+
+.fullscreen {
+    min-height: 100%;
+}
+
+.footer {
+    min-height: 50px;
+    bottom: 0;
+    background-color: whitesmoke;
+}
