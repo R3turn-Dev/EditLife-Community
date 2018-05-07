@@ -1,5 +1,5 @@
 from ..web import SingleWebPage
-from flask import session, render_template, send_from_directory
+from flask import session, request, render_template, send_from_directory
 
 
 class Root():
@@ -14,7 +14,7 @@ class Root():
 
         @self.parent.bp.route('/')
         def root(*args, **kwargs):
-            return render_template("/root/index.html")
+            return render_template("/root/index.html", request=request)
 
         @self.parent.bp.route("/<any(css, img, js):folder>/<path:filename>")
         def test(folder, filename):
