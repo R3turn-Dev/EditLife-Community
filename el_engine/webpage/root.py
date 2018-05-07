@@ -16,6 +16,6 @@ class Root():
         def root(*args, **kwargs):
             return render_template("/root/index.html", request=request)
 
-        @self.parent.bp.route("/<any(css, img, js):folder>/<path:filename>")
+        @self.parent.bp.route("/<any(css, img, js, media):folder>/<path:filename>")
         def test(folder, filename):
             return send_from_directory(path + "/root/", folder + "/" + filename)
