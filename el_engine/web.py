@@ -24,9 +24,15 @@ class SingleWebPage:
         self.route_path = route_path
         self.description = description
 
-        if "name" in kwargs.keys(): self.name = kwargs['name']; del kwargs['name']
-        if "route_path" in kwargs.keys(): self.route_path = kwargs['route_path']; del kwargs['route_path']
-        if "description" in kwargs.keys(): self.description = kwargs['description']; del kwargs['description']
+        if "name" in kwargs.keys():
+            self.name = kwargs['name']
+            del kwargs['name']
+        if "route_path" in kwargs.keys():
+            self.route_path = kwargs['route_path']
+            del kwargs['route_path']
+        if "description" in kwargs.keys():
+            self.description = kwargs['description']
+            del kwargs['description']
 
         self.bp = Blueprint(name, __name__, *args, **kwargs)
 

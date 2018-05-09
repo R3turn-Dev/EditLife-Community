@@ -54,6 +54,6 @@ class PostgreSQL:
         conn = self.getConn()
         cur = conn.cursor()
 
-        cur.execute("SELECT table_name FROM information_schema.tables WHERE table_name = '%s';" % table_name)
+        cur.execute("SELECT table_name FROM information_schema.tables WHERE table_name = '{}';".format(table_name))
         data = cur.fetchall()
         return bool(data)
