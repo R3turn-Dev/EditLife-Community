@@ -4,7 +4,6 @@ from flask import Flask, Blueprint
 class FlaskEngine:
     def __init__(self, configuration):
         self.app = Flask(__name__)
-
         self.config = configuration
 
     def register_blueprint(self, *args, **kwargs):
@@ -14,12 +13,11 @@ class FlaskEngine:
         conf = self.config.copy()
         for k, v in kwargs.items():
             conf[k] = v
-
         self.app.run(*args, **conf)
 
 
 class SingleWebPage:
-    def __init__(self, name=None, route_path=None, description=None, *args, **kwargs):
+    def __init__(self,  name=None, route_path=None, description=None, *args, **kwargs):
         self.name = name
         self.route_path = route_path
         self.description = description
