@@ -23,6 +23,13 @@
         
         <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/index.css"/>
+        <script>
+            var agent = navigator.userAgent.toLowerCase();
+            if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+                window.location.href="https://www.google.com/chrome/";
+            }
+
+        </script>
     </head>
     <body>
         <div class="global-top">
@@ -94,27 +101,28 @@
                                                 <ul class="normal">
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">붕붕</a>
+                                                            <a href="https://www.naver.com" class="title">붕붕
+                                                                <span>55</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">바코드</a>
+                                                            <a href="https://www.naver.com" class="title">바코드<span>25</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">어린왕자</a>
+                                                            <a href="https://www.naver.com" class="title">어린왕자<span>10</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">Adios</a>
+                                                            <a href="https://www.naver.com" class="title">Adios<span>3</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">Graduation</a>
+                                                            <a href="https://www.naver.com" class="title">Graduation<span>55</span></a>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -132,27 +140,27 @@
                                                 <ul class="normal">
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">바코드</a>
+                                                            <a href="https://www.naver.com" class="title">바코드<span>123</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">Sinking down with u</a>
+                                                            <a href="https://www.naver.com" class="title">Sinking down with u<span>90</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">그대들은 어떤 기분이신가요</a>
+                                                            <a href="https://www.naver.com" class="title">그대들은 어떤 기분이신가요<span>170</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">전혀</a>
+                                                            <a href="https://www.naver.com" class="title">전혀<span>60</span></a>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">타는목마름으로</a>
+                                                            <a href="https://www.naver.com" class="title">타는목마름으로<span>30</span></a>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -161,25 +169,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="lecture-recent-many-view">
-                                <div class="panel">
-                                    <div class="panel-head">
-                                        <a href="http://www.naver.com" class="block bleu_de_france">
-                                            <h3>최근 많이본 강의 영상</h3>
-                                        </a>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="slide-position">
-                                            <div class="slides slick-initialized slick-slider">
-                                                <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style>Previous</button>
-                                                <div class="slick-list draggable">
-                                                    <div class="slick-track" style="opacity: 1; width: 4396px; transform: translate3d(-628px,0px,0px);">
-                                                    
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="panel">
+                                <div class="panel-head">
+                                    <a href="https://youtu.be/q-8LQkH02Qo" class="block wild-willow">
+                                        <h3>대표영상</h3>
+                                    </a>
+                                </div>
+                                <div class="panel-body">
+                                    <iframe type="text/html" allowtransparency="true" frameborder="0" width="670" height="480" src="http://www.youtube.com/embed/q-8LQkH02Qo?controls=1&amp;rel=0&amp;vq=hd1080&amp;autohide=1"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -196,11 +193,49 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="recommend-box"></div>
-                        <div class="ad-wrap"></div>
+                        <div class="recommend-post">
+                            <div class="panel">
+                                <div class="panel-head">
+                                    <div class="block block bleu_de_france">
+                                        <h3>댓글이 많은 글</h3>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="simple">
+                                        <li><a class="title">하기싫습니다.<span>123</span></a></li>
+                                        <li><a class="title">질문받습니다.<span>123</span></a></li>
+                                        <li><a class="title">삑그리고다음<span>123</span></a></li>
+                                        <li><a class="title">삑그리고다음<span>123</span></a></li>
+                                        <li><a class="title">영수증은챙겨둬 우리추억을 위해<span>123</span></a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-wrap">
+                            <div class="ad">
+                                <a>AD</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="footer">
+            <div class="w1000">
+                <dl class="links">
+                    <dt><a href="https://discord.gg/eJVytb5"><h5>DISCORD</h5>is our club</a></dt>
+                    <dt><a href="https://tgd.kr/"><h5>트게더</h5>트수들</a></dt>
+                </dl>
+                <ul class="footer-menu">
+                    <li><a>이용약관</a></li>
+                    <li><a>개인정보 취급방침</a></li>
+                    <li><a>청소년 보호정책</a></li>
+                    <li><a>이메일 주소 무단 수집 거부</a></li>
+                    <li><a>고객센터</a></li>
+                </ul>
+            </div>
+            <p class="copyright">© 2000-2018 Minsung</p>
         </div>
     
     </body>

@@ -23,6 +23,10 @@ ul,menu,dir{
     
 }
 
+dl{
+    display: block;
+}
+
 li {
     display: list-item;
 }
@@ -64,7 +68,6 @@ button {
 
 .global-top {
     background-color: white;
-    position: absolute;
     top: 70px;
     left: 0;
     right: 0;
@@ -191,6 +194,10 @@ button {
     letter-spacing: -1px;
 }
 
+.global-body{
+    margin-top: 20px;
+}
+
 .body .left-wing{
     float: left;
     width: 190px;
@@ -313,6 +320,26 @@ button {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+.title span{
+    font-size: 11px;
+    color:#F7683A;
+    padding-left: 5px;
+}
+.body .panel .panel-body ul.simple{
+    padding: 15px 25px;
+    list-style: none;
+}
+
+.body .panel .panel-body ul.simple li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 2.2;
+}
+.body .panel .panel-body ul.simple li .title {
+    color: black;
+    
+}
 
 .right-wing{
     float:left;
@@ -324,7 +351,7 @@ button {
     margin-bottom: 10px;
 }
 .body .right-wing .member-box .member-anonymous .register{
-    line-height: hidden;
+    line-height: 40px;
     padding: 0px 15px;
     color: #444;
 }
@@ -342,3 +369,65 @@ button {
     color: #495baa;
 }
 
+.body .right-wing .recommend-post{
+    margin-bottom: 10px;
+}
+
+.ad-wrap .ad{
+    width: 320px;
+    height: 320px;
+    background-color: white;
+}
+
+.footer{
+    text-align: center;
+    background-color: #111a23;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer .w1000{
+    font-size: 11px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.footer .links{
+    margin-bottom: 20px;
+}
+
+.footer .links dt{
+    text-align: left;
+    display: inline-block;
+}
+
+.footer .links dt a{
+    display: block;
+    color: #999;
+    padding: 0 20px;
+}
+.footer .links dt a h5{
+    color: #ddd;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer .footer-menu{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.footer .footer-menu li{
+    font-size: 12px;
+    display: inline-block;
+}
+.footer .footer-menu li a{
+    display: inline-block;
+    padding: 4px 0;
+    color: #ccc;
+}
+.footer .footer-menu li:last-child:after {
+    content: "";
+}
+.footer .footer-menu li a:after{
+    content: "|";
+    padding: 0 6px;
+    color: #666;
+}
