@@ -1,145 +1,344 @@
-/*
-Created At: 2018-05-06 16:28 KST
-Author: R3turnDev (return0927)
- */
-
-html, body {
-    height: 100%;
+* {
+    padding: 0;
     margin: 0;
-
-    font-family: 'Nanum Square', sans-serif;
+    box-sizing: border-box;
 }
 
-.pc {
+body {
+    font-size: 12px;
+    background-color: #f2f4f8;
+    color: black;
+    min-width: 1280px;
 }
 
-.page {
-    vertical-align: middle;
-    text-align: center;
+a, abbr{
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
 }
 
-div.login {
+ul,menu,dir{
+    display: block;
+    list-style-type: disc;
+    
+}
+
+li {
+    display: list-item;
+}
+
+strong, b{
+    font-weight: bold;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    padding-bottom: 60px;
+}
+
+.fa{
+    display: inline-block;
+    text-rendering: auto;
+    
+}
+
+.wrapper{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.wrapper:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.global-top {
+    background-color: white;
     position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    min-width: 1280;
+    z-index: 500;
+}
+
+.global-top .header{
+    background-color: white;
+    border-bottom: 2px solid #FFEB46;
+    padding-bottom: 20px;
+}
+
+.global-top .header .top-menu-wrap .right-menu{
     float: right;
-    right: 20px;
-
-    min-height: 30px;
-
-    font-size: .75em;
+    text-align: right;
+    margin-left: 15px;
+    font-size: 0px;
+}
+.global-top .header .top-menu-wrap .right-menu li{
+    display: inline-block;
+}
+.global-top .header .top-menu-wrap .right-menu li:after{
+    display: inline-block;
+    content: "|";
+    padding: 0 8px;
+    font-size: 12px;
+    color: #eee;
+}
+.global-top .header .top-menu-wrap .right-menu li:last-child:after {
+    content: "";
 }
 
-div.login input {
-    height: 15px;
-    width: calc(15px * 7.07);
+.global-top .header .top-menu-wrap .right-menu li a{
+    font-size: 12px;
+    line-height: 40px;
+    color: black;
 }
 
-div.login input {
+
+.global-top .header .top-menu-wrap .left-menu{
+    float: right;
+    line-height: 30px;
+}
+.global-top .header .top-menu-wrap .left-menu span {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    padding-right: 10px;
+}
+
+.global-top .header .top-menu-wrap:after, .global-top .header:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.global-top .header .logo-wrap{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.global-top .header .logo-wrap a{
+    display: block;
+}
+
+.global-top .header .logo-wrap a img{
+    width: 190px;
+}
+
+.global-top .header .search-wrap{
+    position: absolute;
+    bottom: 10px;
+    left: 240px;
+    width: 240px;
+}
+
+.global-top .header .search-wrap .search{
+    position: relative;
+    border: 1px solid #eee;
+}
+.global-top .header .search-wrap .search .fa{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #495baa;
+    font-size: 16px;
+    padding: 0 8px;
+    cursor: pointer;
+    line-height: 34px;
+}
+
+.global-top .header .search-wrap .search .search-input{
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 8px 40px 8px 16px;
+    height: 32px;
+    font-size: 14px;
+    color: black;
+}
+
+.global-top .header .header-menu-bar{
+    list-style: none;
+    float: right;
+    overflow: hidden;
+    height: 40px;
+    font-size: 0px;
+}
+
+.global-top .header .header-menu-bar li{
+    display: inline-block;
+}
+
+.global-top .header .header-menu-bar li a{
+    display: block;
+    padding: 12px 6px;
+    font-size: 15px;
+    font-weight: 900;
+    color: black;
+    letter-spacing: -1px;
+}
+
+.body .left-wing{
+    float: left;
+    width: 190px;
+    margin-right: 10px;
+    color: black;
+}
+
+.body .left-wing .left-menu{
+    list-style: none;
+    line-height: 1.9;
+    font-size: 12px;
+}
+.body .left-wing .left-menu a{
+    display: block;
+    padding: 0 10px;
+    font-weight: 500;
+    transition: background-color .5s ease;
+    text-decoration: none;
+}
+
+.body .content-body{
+    float: left;
+    width: 670px;
     margin-right: 10px;
 }
 
-div.login input:nth-last-child(1) {
-    margin-right: 5px;
+.body .content-body .row:after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
-div.login i {
-    font-size: 1.5em;
+.body .content-body .row .col-50{
+    float: left;
+    width: 330px;
 }
 
-#login-form div {
+.body .content-body .row .col-50:first-child{
+    margin-right: 10px;
+}
+
+.body .panel{
+    border: 1px solid #dde3ec;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.body .panel .panel-head{
+    background-color: #f7f8fa;
+    border-bottom: 1px solid #eee;
+    
+}
+.body .panel .panel-head>a:after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 15px;
     display: inline-block;
-    min-height: 30px;
-
-    padding: 7px 0;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 46px 18px;
+    vertical-align: top;
+    background-position: -30px 0;
+    width: 16px;
+    height: 16px;
 }
 
-#login-form > div:last-child {
-    padding: 8px 0;
-}
-
-.center {
-    margin: 0 auto;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.intro .center {
+.body .panel .panel-head .block{
     position: relative;
-    padding: 32.5vh 0;
-
-    text-align: center;
+    display: block;
+    padding: 12px 15px;
 }
 
-.intro {
-    background-color: aliceblue;
+.body .panel .panel-head .block h3{
+    font-size: 14px;
+    color: black;
+    line-height: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-#introduce {
+.body .panel .panel-head .block.brink-pink {
+    border-left: 3px solid #fa5f7e;
+}
+
+.body .panel .panel-head .block.wild-willow{
+    border-left: 3px solid #a7d269;
+}
+.body .panel .panel-head .block.bleu_de_france{
+    border-left: 3px solid #3f84ff;
+}
+
+.body .panel .panel-body{
     position: relative;
-    height: 35vh;
-    width: calc(35vh/9*16);
+    background-color: white;
+}
+.body .panel .panel-body ul.normal{
+    list-style: none;
+    line-height: 20px;
 }
 
-.fullscreen {
-    min-height: 100%;
+.body .panel .panel-body ul.normal li{
+    padding: 4px 15px;
+    position: relative;
+    font-size: 0;
 }
 
-.horizontal-list {
-    display: inline;
+.body .panel .panel-body ul.normal li .text-wrap{
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 6px 0;
+}
+.body .panel .panel-body ul.normal li .text-wrap .title{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-/*.horizontal-list > * {
-    display: inline;
-}*/
-
-.intro .content {
-    font-size: 1.5em;
+.right-wing{
+    float:left;
+    width: 320px;
 }
-
-.content .main-text {
-    font-size: 1.2em;
+.body .right-wing .member-box{
+    border: 1px solid #dde3ec;
+    background-color: #fbfbfb;
+    margin-bottom: 10px;
 }
-
-header.pc {
+.body .right-wing .member-box .member-anonymous .register{
+    line-height: hidden;
+    padding: 0px 15px;
+    color: #444;
+}
+.body .right-wing .member-box .member-anonymous .login{
+    display: block;
+    margin: 0px 15px 15px;
     padding: 15px 0;
-    min-height: 100px;
+    border: 1px solid #ddd;
+    background-color: ##f5f7f9;
+    font-size: 14px;
+    text-align: center;
 }
 
-nav {
-    margin: 5px auto;
-    
-    height: 41px;
-
-    vertical-align: middle;
-    
-    background-color: mediumpurple;
+.body .right-wing .member-box .member-anonymous .login strong{
+    color: #495baa;
 }
 
-nav > a {
-    display: inline-block;
-    width: 200px;
-    max-height: 40px;
-
-    padding: 9px 0;
-
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-nav > a:hover {
-    background-color: rebeccapurple;
-}
-
-nav > a.menu-ico {
-    max-width: 40px;
-}
-
-
-.footer {
-    min-height: 30px;
-    bottom: 0;
-    background-color: whitesmoke;
-
-    padding-top: 5px;
-    font-size: 15px;
-}
