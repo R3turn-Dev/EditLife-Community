@@ -9,6 +9,13 @@ body{
     
 }
 
+col{
+    display: table-column;
+}
+colgroup{
+    display: table-column-group;
+}
+
 div{
     display: block;
 }
@@ -16,6 +23,33 @@ div{
 form {
     display: block;
     
+}
+strong {
+    font-weight: 500;
+}
+table{
+    background-color: transparent;
+    border-collapse: collapse;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+p {
+    margin: 0 0 10px;
 }
 
 .layout-login, .layout-register{
@@ -44,25 +78,144 @@ form {
 .container{
     position: relative;
     width: 768;
-    min-width: 460;
+    min-width: 600;
     margin: 0 auto;
 }
 .join-content{
-    width: 460 !important;
+    width: 600px !important;
     margin: 0 auto !important;
+}
+.join-form{
+    
 }
 
 .terms{
     margin-bottom: 20px;
     border: solid 1px #dadada;
     background-color: white;
+    padding-left: 15px;
+    padding-right:30px;
 }
 
-.input-check{
+.form-title{
+    width: 80%
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    padding: 12px 0;
+    margin 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-terms{
+    width: 100;
+    height: 145px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+}
+.terms-style{
+    line-height: 1.4;
+}
+
+.terms-style h3{
+    margin: 20px 0 10px;
+    color: black;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.form-agree{
+    text-align: right;
+    color: #516B82;
+    padding: 15px 0;
+}
+label span.checkbox{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    left: 0;
+    background-color: #F1F1F1;
+    border: 1px solid #ccc;
+}
+
+label span.checkbox:after{
+    content: "";
+    width: 8px;
+    height: 5px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border: 2px solid #666;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: .15;
+    transform: rotate(-45deg);
+}
+
+.form-table{
+    overflow-x: auto;
+    width: 100%;
+    font-size: 13px;
+}
+.form-table table{
+    width: 100%;
+}
+.form-table table.fix{
+    margin: 0 0 15px 0;
+}
+
+.form-table th, .form-table td{
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+}
+
+.form-table th{
+    background-color: #f1f1f1;
+    text-align:left;
+}
+.form-table td.left{
+    text-align-last: left;
+}
+.terms-style ul.b{
+    list-style-type: disc;
+    margin-bottom: 20px;
+}
+.terms-style ul li{
+    margin: 5px 0;
+    font-size: 13px;
+}
+.terms_style p {
+    color: #666;
+    font-size: 13px;
+    text-align: justify;
+}
+
+.form-button{
+    display: flex;
+    justify-content: center;
     position: relative;
-    display: block;
+    padding: 15px 0;
+    border-top: 1px solid #666;
 }
 
-.terms-check-all .input-check{
-    height: 58px;
+.form-button .button-agree{
+    background-color: #688fed;
+        font-size: 16px;
+    color: #fff;
+    margin: 0 3px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.form-button .button-cancel{
+    background-color: white;
+        font-size: 16px;
+    color: balck;
+    margin: 0 3px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,0.1);
 }
