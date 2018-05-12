@@ -12,7 +12,6 @@ DB_Profile = _setting.Engine[DB_Engine]
 Web_Engine = _setting.Preferences['Web_Engine']
 Web_Profile = _setting.Engine[Web_Engine]
 
-DB = engineSelect(DB_Engine)
 
 Web = FlaskEngine(Web_Profile)
 
