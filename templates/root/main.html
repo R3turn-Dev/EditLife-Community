@@ -20,7 +20,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/df655a799cdbfe977ae05f6cf484e77ec76b3312/nanumsquare.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+
         <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/index.css"/>
         <script>
@@ -184,7 +184,7 @@
                     <div class="right-wing">
                         <div class="member-box">
                             <div class="member-anonymous">
-                                <a class="register">Edit Life <strong>1</strong>번째 회원가입</a>
+                                <a class="register">Edit Life <strong>{{ board['members'] + 1 }}</strong>번째 회원가입</a>
                                 <a class="login" href="/login">
                                     <strong>
                                         Edit Life
@@ -202,12 +202,15 @@
                                 </div>
                                 <div class="panel-body">
                                     <ul class="simple">
-                                        <li><a class="title">하기싫습니다.<span>123</span></a></li>
+                                        {% for title, board, no, comments in board['most_comments'] %}
+                                        <li><a class="title" href="{{ 'bbs/{}/{}'.format(board, no) }}">{{ title }}<span>{{ comments }}</span></a></li>
+                                        {% endfor %}
+                                        <!-- <li><a class="title">하기싫습니다.<span>123</span></a></li>
                                         <li><a class="title">질문받습니다.<span>123</span></a></li>
                                         <li><a class="title">삑그리고다음<span>123</span></a></li>
                                         <li><a class="title">삑그리고다음<span>123</span></a></li>
-                                        <li><a class="title">영수증은챙겨둬 우리추억을 위해<span>123</span></a></li>
-                                        
+                                        <li><a class="title">영수증은챙겨둬 우리추억을 위해<span>123</span></a></li> -->
+
                                     </ul>
                                 </div>
                             </div>
@@ -237,7 +240,7 @@
             </div>
             <p class="copyright">© 2000-2018 Minsung</p>
         </div>
-    
+
     </body>
 
 </html>
