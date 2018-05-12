@@ -1,6 +1,11 @@
 from psycopg2 import connect
 from threading import get_ident
 from .exceptions import DBEngineNotFound
+from .settings import SettingManager as SettingMan
+
+_setting = SettingMan().get()
+engine = _setting.Preferences['DB_Engine']
+profile = _setting.Engine[engine]
 
 
 def engineSelect(engine):
@@ -57,3 +62,27 @@ class PostgreSQL:
         cur.execute("SELECT table_name FROM information_schema.tables WHERE table_name = '{}';".format(table_name))
         data = cur.fetchall()
         return bool(data)
+
+    def getMemberCount(self):
+        try:
+            conn = self.getConn()
+            cur = conn.cursor()
+
+            cur.execute("SELECT count(*) FROM users;")
+            data = cur.fetchall()
+
+            return [False, data[0][0]]
+        except Exception as ex:
+            return [ex, None]
+
+    def getArticles(self, selects="*", board="커뮤니티", sort="no DESC"):
+        try:
+            conn = self.getConn()
+            cur = conn.cursor()
+
+            cur.execute("SELECT {} FROM articles WHERE board = '{}' ORDER BY {};".format(selects, board, sort))
+            data = cur.fetchall()
+
+            return [False, data]
+        except Exception as ex:
+            return [ex, None]
