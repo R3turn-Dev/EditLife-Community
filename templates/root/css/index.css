@@ -442,13 +442,19 @@ input, select, button, textarea{
     padding: 4px 0;
     color: #ccc;
 }
-.footer .footer-menu li:last-child:after {
-    content: "";
-}
+
 .footer .footer-menu li a:after{
     content: "|";
     padding: 0 6px;
     color: #666;
+}
+.footer .footer-menu li a:after:last-child {
+    content: "";
+}
+.footer .company-info{
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 /*login*/
@@ -524,7 +530,7 @@ input, select, button, textarea{
 .layout-login .other-navigation li a{
     font-weight: 400;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .layout-login .other-navigation li:after{

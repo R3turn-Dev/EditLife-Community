@@ -38,9 +38,9 @@
                     <div class="top-menu-wrap">
                         <ul class="right-menu">
                             <li><a href="/login">로그인</a></li>
-                            <li><a href="/login">추가할게</a></li>
-                            <li><a href="/login">또뭐가있을까</a></li>
-                            <li><a href="/login">모르게따</a></li>
+                            <li><a href="">회원가입</a></li>
+                            <li><a href="">고객센터</a></li>
+                            <li><a href="">도움말</a></li>
                         </ul>
                         <div class="left-menu">
                             <div class="fb-like fb_iframe_widget" data-href="https://facebook.com/leynuxms" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&app_id=470392843048618&container_width=0&href=https%3A%2F%2Ffacebook.com%2Forbi.kr&layout=button_count&locale=ko_KR&sdk=joey&share=false&show_faces=false&size=small">
@@ -76,6 +76,7 @@
                             <li><a>가슴이너무 아파</a></li>
                             <li><a>개발한것처럼</a></li>
                             <li><a>어찌이리 가슴아픈지</a></li>
+<!--                            요기 개발해야함-->
                         </ul>
                     </div>
                     <div class="content-body">
@@ -185,7 +186,7 @@
                                         {% for title, board, no, comments in board['most_comments'] %}
                                         <li><a class="title" href="{{ 'bbs/{}/{}'.format(board, no) }}">{{ title }}<span>{{ comments }}</span></a></li>
                                         {% endfor %}
-                                        <!-- <li><a class="title">하기싫습니다.<span>123</span></a></li>
+                                        <!-- <li><a class="title">하기싫습니다.<span>123</span></a></li>-->
 
                                     </ul>
                                 </div>
@@ -214,7 +215,8 @@
                     <li><a>고객센터</a></li>
                 </ul>
             </div>
-            <p class="copyright">© 2000-2018 Minsung</p>
+            <p class="company-info"> 대표이사 : 삼만원 / 주소 : http://127.0.0.1 / 전화번호 : 010-1234-5678</p>
+            <p class="copyright">© 2018-2018 </p>
         </div>
 
     </body>
