@@ -58,14 +58,9 @@
                     </div>
                     <div class="header-menu-wrap">
                         <ul class="header-menu-bar">
-                            <li><a>시그널을</a></li>
-                            <li><a>보내</a></li>
-                            <li><a>사인을</a></li>
-                            <li><a>보내</a></li>
-                            <li><a>찌릿</a></li>
-                            <li><a>찌릿</a></li>
-                            <li><a>찌릿</a></li>
-                            <li><a>찌릿</a></li>
+                            {% for name in board['boards'] %}
+                            <li><a href="{{ 'bbs/{}'.format(name) }}">{{ name }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -90,46 +85,31 @@
                             </div>
                             <div class="main-post-wrap">
                                 <div class="row">
+                                    {% for name, color in board['main_frame']['boards'] %}
                                     <div class="col-50">
                                         <div class="panel">
                                             <div class="panel-head">
-                                                <a href="https://www.naver.com" class="block brink-pink">
-                                                    <h3>김하온</h3>
+                                                <a href="https://www.naver.com" class="block {{ color }}">
+                                                    <h3>{{ name }}</h3>
                                                 </a>
                                             </div>
                                             <div class="panel-body">
                                                 <ul class="normal">
+                                                    {% for title, no, comments in board['main_frame']['articles'][name] %}
                                                     <li>
                                                         <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">붕붕
-                                                                <span>55</span></a>
+                                                            <a href="{{ 'bbs/{}/{}'.format(name, no) }}" class="title">{{ title }}
+                                                                <span>{{ comments }}</span></a>
                                                         </div>
                                                     </li>
-                                                    <li>
-                                                        <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">바코드<span>25</span></a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">어린왕자<span>10</span></a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">Adios<span>3</span></a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="text-wrap">
-                                                            <a href="https://www.naver.com" class="title">Graduation<span>55</span></a>
-                                                        </div>
-                                                    </li>
+                                                    {% endfor %}
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-50">
+                                    {% endfor %}
+
+                                    <!-- <div class="col-50">
                                         <div class="panel">
                                             <div class="panel-head">
                                                 <a href="https://www.naver.com" class="block wild-willow">
@@ -166,7 +146,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="panel">
@@ -206,10 +186,6 @@
                                         <li><a class="title" href="{{ 'bbs/{}/{}'.format(board, no) }}">{{ title }}<span>{{ comments }}</span></a></li>
                                         {% endfor %}
                                         <!-- <li><a class="title">하기싫습니다.<span>123</span></a></li>
-                                        <li><a class="title">질문받습니다.<span>123</span></a></li>
-                                        <li><a class="title">삑그리고다음<span>123</span></a></li>
-                                        <li><a class="title">삑그리고다음<span>123</span></a></li>
-                                        <li><a class="title">영수증은챙겨둬 우리추억을 위해<span>123</span></a></li> -->
 
                                     </ul>
                                 </div>
