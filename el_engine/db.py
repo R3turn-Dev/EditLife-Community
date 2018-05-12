@@ -75,6 +75,18 @@ class PostgreSQL:
         except Exception as ex:
             return [ex, None]
 
+    def geBoards(self, selects="*", sort="index"):
+        try:
+            conn = self.getConn()
+            cur = conn.cursor()
+
+            cur.execute("SELECT {} FROM boards ORDER BY {};".format(selects, sort))
+            data = cur.fetchall()
+
+            return [False, [x[0] for x in data]]
+        except Exception as ex:
+            return [ex, None]
+
     def getArticles(self, selects="*", board="커뮤니티", sort="no DESC"):
         try:
             conn = self.getConn()
