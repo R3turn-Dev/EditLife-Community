@@ -15,6 +15,10 @@ a{
     color: inherit;
 }
 
+div{
+    display: block;
+}
+
 a, abbr{
     cursor: pointer;
     color: inherit;
@@ -449,13 +453,13 @@ input, select, button, textarea{
 
 /*login*/
 
-.layout-login{
+.layout-login, .layout-register{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.layout-login .bg{
+.layout-login .bg, .layout-register .bg{
     position: relative;
     background: linear-gradient(135deg, #688fed 0%, #475ca9 45%, #688fed 100%);
     padding: 40px 20px 60px;
@@ -534,9 +538,26 @@ input, select, button, textarea{
     content: "";
 }
 
+.layout-register .bg h1{
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
 
 .flash{
     list-style: none;
     margin: 30px auto 0;
     max-width: 320px;
+}
+
+.container{
+    position: relative;
+    width: 768;
+    min-width: 460;
+    margin: 0 auto;
 }
