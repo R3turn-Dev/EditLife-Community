@@ -11,6 +11,14 @@ body {
     min-width: 1280px;
 }
 
+a{
+    color: inherit;
+}
+
+div{
+    display: block;
+}
+
 a, abbr{
     cursor: pointer;
     color: inherit;
@@ -43,6 +51,17 @@ img {
 button {
     margin: 0;
     padding: 0;
+}
+
+form{
+    display: block;
+    margin-top: 0em;
+}
+
+input, select, button, textarea{
+    font: inherit;
+    color: black;
+    outline: 0;
 }
 
 .body{
@@ -430,4 +449,115 @@ button {
     content: "|";
     padding: 0 6px;
     color: #666;
+}
+
+/*login*/
+
+.layout-login, .layout-register{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-login .bg, .layout-register .bg{
+    position: relative;
+    background: linear-gradient(135deg, #688fed 0%, #475ca9 45%, #688fed 100%);
+    padding: 40px 20px 60px;
+}
+
+.layout-login .form-wrap{
+    position: relative;
+    z-index: 2;
+    max-width: 300px;
+    margin: -40px auto 30px;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color:white;
+    box-shadow: 0 0 tpx 3px rgba(80,80,80,0.1);
+}
+
+.layout-login .form-wrap .input-wrap{
+    position: relative;
+    display: block;
+    border-radius: 40px;
+    padding: 0 30px;
+    margin-bottom: 10px;
+    background-color: #f4f4f4;
+}
+
+.layout-login .form-wrap .input-wrap input{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+    padding: 10px 20px 10px 0px;
+}
+
+.layout-login .form-wrap .submit{
+    display: block;
+    width: 100%;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #688fed 0%, #475ca9 45%, #688fed 100%);
+    border: 0;
+    cursor: pointer;
+}
+
+.layout-login .other-navigation{
+    color: #495baa;
+    list-style: none;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0;
+}
+
+.layout-login .other-navigation li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.layout-login .other-navigation:last-child{
+    margin-right: 0;
+}
+
+.layout-login .other-navigation li a{
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.layout-login .other-navigation li:after{
+    display: inline-block;
+    content: "|";
+    padding: 0 8px;
+    font-size: 12px;
+    color: #eee;
+}
+.layout-login .other-navigation li:last-child:after {
+    content: "";
+}
+
+.layout-register .bg h1{
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+
+.flash{
+    list-style: none;
+    margin: 30px auto 0;
+    max-width: 320px;
+}
+
+.container{
+    position: relative;
+    width: 768;
+    min-width: 460;
+    margin: 0 auto;
 }

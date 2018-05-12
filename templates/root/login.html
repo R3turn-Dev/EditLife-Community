@@ -24,6 +24,35 @@
         <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/index.css"/>
     </head>
-    <body>
+    <body class="layout-login">
+        <div class="bg">
+            <ol class="flash">
+                
+            </ol>
+        </div>
+        <div class="body-wrap">
+            <form class="content">
+                <input type="hidden" id="url" name="url" value="www.naver.com">
+                <div class="form-wrap">
+                    <div class="input-wrap">
+                        <input type="text" class="input id" name="username" title="아이디" placeholder="아이디" spellcheck="false" autocapitalize="off" required>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="input pw" name="password" title="비밀번호" placeholder="비밀번호" required>
+                    </div>
+                    <button type="submit" class="submit">로그인</button>
+                    <ol class="other-navigation">
+                        <li>
+                            <a>
+                                아이디 찾기
+                            </a>
+                        </li>
+                        <li><a>비밀번호 찾기</a></li>
+                        <li><a href="register.html">회원가입</a></li>
+                    </ol>
+                </div>
+            </form>
+        </div>
+        
     </body>
 </html>
