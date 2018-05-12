@@ -1,8 +1,9 @@
 from ..web import SingleWebPage
 from flask import session, request, render_template, send_from_directory
+from ..db import engine, profile, engineSelect
 
 
-class Root():
+class Root:
     def __init__(self, path):
         self.parent = SingleWebPage(
             name="/",
@@ -10,11 +11,21 @@ class Root():
             description="Root 홈(메인페이지)",
             template_folder=path
         )
+        self.mobile_platform = ['android', 'iphone', 'blackberry']
+        self.db = engineSelect(engine)(**profile)
+
         print(self.parent.bp.static_folder)
 
         @self.parent.bp.route('/')
         def root(*args, **kwargs):
-            return render_template("root/main.html", request=request)
+            _, member_count = self.db.getMemberCount()
+            _, most_comments = self.db.getArticles(selects="title, board, no, (SELECT COUNT(*) FROM comments WHERE article=articles.no)", board="커뮤니티", sort="(SELECT COUNT(*) FROM comments WHERE article=articles.no) DESC")
+
+            is_mobile = request.user_agent.platform in self.mobile_platform
+            return render_template("root/main.html", request=request, is_mobile=is_mobile, board= {
+                "members": member_count,
+                "most_comments": most_comments
+            })
 
         @self.parent.bp.route("/<any(css, img, js, media):folder>/<path:filename>")
         def test(folder, filename):
