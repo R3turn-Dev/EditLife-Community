@@ -76,15 +76,50 @@
                                             <tr>
                                                 <th>아이디</th>
                                                 <td>
-                                                    <input type="text" autocapitalized="off" value="userId" data-valid="true">
+                                                    <input type="text" autocapitalized="off" value name="userId" data-valid="true">
+                                                    <span class="tip">영문, 숫자, _만 입력 가능 / 최소 4자 이상 입력하세요.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비밀번호</th>
+                                                <td>
+                                                    <input type="password" value name="userPassword">
+                                                    <span class="tip">영문, 숫자, 특수무기호 혼합 사용 / 최소 4자 이상 입력하세요.</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>비밀번호 확인</th>
+                                                <td>
+                                                    <input type="password" value name="userRePassword">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>닉네임</th>
+                                                <td>
+                                                    <input type="text" value name="nickname" data-valid="true">
+                                                    <span class="tip">별명은 최대 한글6자, 영문12자 입력</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>이메일</th>
+                                                <td>
+                                                    <input type="email" value name="email" data-valid="true">
+                                                    <span class="tip">이메일은 반드시 정확하게 입력하셔야합니다.<br>가입안내, 비밀번호 분실 또는 수정 등 활동에 필수적인 메일을 발송합니다.</span>
+                                                    <label class="agree" for="newsletter-check">
+                                                        <input type="checkbox" id="newsletter-check" name="adsEmailYN" checked>
+                                                        <span class="checkbox"></span>
+                                                        공지 및 정보 메일을 수신합니다.
+                                                    </label>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                            
+                                <div class="form-button">
+                                    <button type="button" class="button-agree" onclick="">회원가입</button>
+                                    <button type="button" class="button-cancel" onclick="">취소</button>
+                                </div>
                             </form>
-                            
                         </div>
                     </div>
                 </div>
