@@ -39,6 +39,14 @@ class Root:
                 "most_comments": most_comments
             })
 
+        @self.parent.bp.route("/login")
+        def login(*args, **kwargs):
+            return render_template('root/login.html')
+
+        @self.parent.bp.route("/register")
+        def register(*args, **kwargs):
+            return render_template('root/register.html')
+
         @self.parent.bp.route("/<any(css, img, js, media):folder>/<path:filename>")
         def test(folder, filename):
             return send_from_directory(path + "/root/", folder + "/" + filename)
