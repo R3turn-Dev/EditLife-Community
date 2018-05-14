@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>EL : Edit Life | 회원가입</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="title" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+        <meta name="publisher" content="EL : Edit Life"/>
+        <meta name="author" content="EL : Edit Life"/>
+        <meta name="robots" content="index,follow"/>
+        <meta name="keywords" content="트위치, 영상편집, 유튜브, 크리에이터, 트수만성, 에딧라이프, Edit Life, EL"/>
+        <meta name="description" content="유튜브와 트위치 플랫폼에서 활동하는 크레이어터 및 스트리머분들과 영상편집을 하시는 분들의 커뮤니티입니다."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="og:title" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+        <meta property="og:site_name" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+        <meta property="og:author" content="EL : Edit Life | 트위치&유튜버 크리에이터 커뮤니티"/>
+        <meta property="og:type" content=""/>
+        <!-- <meta property="og:image" content="Site Representitive image" /> -->
+        <meta property="og:description" content="유튜브와 트위치 플랫폼에서 활동하는 크레이어터 및 스트리머분들과 영상편집을 하시는 분들의 커뮤니티입니다."/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/df655a799cdbfe977ae05f6cf484e77ec76b3312/nanumsquare.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/register.css"/>
+        <script>
+            $(document).ready(function(){
+                $(".form-open").click(function(){
+                    $(".form-open").addClass("close");
+                    $(".terms-style").addClass("open");
+                    $(".close").ready(function(){
+                        $(".close").click(function(){
+                            $(".form-open, .close").removeClass("close");
+                            $(".terms-style, .open").removeClass("open");
+                        });
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body class="layout-register">
+        <div class="bg">
+            <h1>회원 가입</h1>
+            <ol class="flash">
+                
+            </ol>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="join-content">
+                    <div class="join-form">
+                        <div class="terms">
+                            <div class="register-tapmenu">
+                                <div class="register-tap">
+                                    <span>STEP 1.</span>
+                                    약관동의
+                                </div>
+                                <div class="register-tap">
+                                    <span>STEP 2.</span>
+                                    본인인증
+                                </div>
+                                <div class="register-tap current">
+                                    <span>STEP 3.</span>
+                                    정보입력
+                                </div>
+                                <div class="register-tap">
+                                    <span>STEP 4.</span>
+                                    가입완료
+                                </div>
+                            </div>
+                            <h3 class="form-title">기본정보입력<span class="title-tiny">*는 필수 입력 항목입니다.</span></h3>
+                            <form id="infoForm">
+                                <div class="form topline">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>아이디</th>
+                                                <td>
+                                                    <input type="text" autocapitalized="off" value="userId" data-valid="true">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
