@@ -28,9 +28,12 @@
                 $(".form-open").click(function(){
                     $(".form-open").addClass("close");
                     $(".terms-style").addClass("open");
-                });
-                $(".close").click(function(){
-                    alert("asdf")
+                    $(".close").ready(function(){
+                        $(".close").click(function(){
+                            $(".form-open, .close").removeClass("close");
+                            $(".terms-style, .open").removeClass("open");
+                        });
+                    });
                 });
             });
         </script>
