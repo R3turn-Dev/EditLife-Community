@@ -1,6 +1,7 @@
 from ..web import SingleWebPage
-from flask import session, request, render_template, send_from_directory, redirect
+from flask import session, request, render_template, send_from_directory, redirect, url_for
 from ..db import engine, profile, engineSelect
+from time import time
 from hashlib import sha256
 
 encrypt = lambda x: sha256(x.encode()).hexdigest().upper()
@@ -26,7 +27,7 @@ class Root:
             _, most_comments = self.db.getArticles(selects="title, board, no, (SELECT COUNT(*) FROM comments WHERE article=articles.no and hidden = false)", board="커뮤니티", sort="count DESC")
 
             is_mobile = request.user_agent.platform in self.mobile_platform
-            return render_template("root/main.html", request=request, is_mobile=is_mobile, board= {
+            return render_template("root/main.html", request=request, session=session, is_mobile=is_mobile, board= {
                 "members": member_count,
                 "boards": boards,
                 "main_frame": {
@@ -44,18 +45,36 @@ class Root:
 
         @self.parent.bp.route("/login", methods=["GET", "POST"])
         def login(*args, **kwargs):
-            if request.method == "GET": return render_template('root/login.html')
+            if request.method == "GET":
+                if session.get("LoginInfo"):
+                    return redirect('./')
+
+                return render_template('root/login.html')
             else:
-                print(request.form)
                 _username = request.form.get("username")
                 _password = request.form.get("password")
                 _pw_hash = encrypt(_password)
                 del _password
 
                 err, ret = self.db.loginAccount(_username, _pw_hash)
-                if err:
+                if err:  # TODO: Add custom error page and Add redirection
                     return """"""
-                return repr(ret)
+
+                _display_name, _email_verified = ret[0]
+                if _email_verified is True:
+                    session['LoginInfo'] = {
+                        "profile": {
+                            "display_name": _display_name
+                        },
+                        "login": {
+                            "id": _username,
+                            "time": time()
+                        }
+                    }
+
+                    return """<script>alert('환영합니다, {}님!');location.href='/';</script>""".format(_display_name)
+                else:
+                    return redirect('./verify')
 
         @self.parent.bp.route("/register")
         def register(*args, **kwargs):
@@ -71,6 +90,21 @@ class Root:
                 return render_template(pages[step-1])
             else:
                 return redirect("./register?step=1")
+
+        @self.parent.bp.route("/logout")
+        def logout(*args, **kwargs):
+            del session['LoginInfo']
+            return redirect('./')
+
+        @self.parent.bp.route("/verify")
+        def verify(*args, **kwargs):
+            key = request.args.get("key")
+
+            if key:
+                err, checked = self.db.verifyEmailCode(key)
+
+            else:
+                return """."""  # TODO: Add email verification page and connect
 
         @self.parent.bp.route("/<any(css, img, js, media):folder>/<path:filename>")
         def test(folder, filename):
