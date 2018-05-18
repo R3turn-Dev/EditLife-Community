@@ -75,7 +75,7 @@ class PostgreSQL:
         except Exception as ex:
             return [ex, None]
 
-    def geBoards(self, selects="*", sort="index"):
+    def getBoards(self, selects="*", sort="index"):
         try:
             conn = self.getConn()
             cur = conn.cursor()
