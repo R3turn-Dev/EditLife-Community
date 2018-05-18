@@ -1,4 +1,5 @@
 from flask import Flask, Blueprint
+from os import urandom
 
 
 class FlaskEngine:
@@ -11,8 +12,15 @@ class FlaskEngine:
 
     def run(self, *args, **kwargs):
         conf = self.config.copy()
+        secret_key = urandom(32)
         for k, v in kwargs.items():
             conf[k] = v
+
+        if "secret_key" in conf.keys():
+            secret_key = conf['secret_key']
+            del conf['secret_key']
+
+        self.app.secret_key = secret_key
         self.app.run(*args, **conf)
 
 
