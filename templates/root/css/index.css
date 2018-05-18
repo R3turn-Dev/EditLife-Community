@@ -567,3 +567,27 @@ input, select, button, textarea{
     min-width: 460;
     margin: 0 auto;
 }
+
+
+.register-tapmenu{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 0;
+    border-bottom: 1px solid #666;
+}
+.register-tapmenu .register-tap{
+    width: 25%;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    padding: 15px 0; 
+}
+.register-tapmenu .register-tap span{
+    font-size: 12px;
+    opacity: .7;
+    padding: 0 5px 0 0;
+}
+.register-tapmenu .register-tap .current{
+    color: #fff;
+    background-color: #666;
+}
