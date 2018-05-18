@@ -36,12 +36,18 @@
             <div class="header">
                 <div class="wrapper">
                     <div class="top-menu-wrap">
-                        <ul class="right-menu">
-                            <li><a href="/login">로그인</a></li>
-                            <li><a href="">회원가입</a></li>
+                        {% if session.get("LoginInfo") %}<ul class="right-menu">
+                            <li><a>안녕하세요, {{ session['LoginInfo']['profile']['display_name'] }}님!</a></li>
+                            <li><a href="/logout">로그아웃</a></li>
+                            <li><a href="">마이페이지</a></li>
                             <li><a href="">고객센터</a></li>
                             <li><a href="">도움말</a></li>
-                        </ul>
+                        </ul>{% else %}<ul class="right-menu">
+                            <li><a href="/login">로그인</a></li>
+                            <li><a href="/register">회원가입</a></li>
+                            <li><a href="">고객센터</a></li>
+                            <li><a href="">도움말</a></li>
+                        </ul>{% endif %}
                         <div class="left-menu">
                             <div class="fb-like fb_iframe_widget" data-href="https://facebook.com/leynuxms" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&app_id=470392843048618&container_width=0&href=https%3A%2F%2Ffacebook.com%2Forbi.kr&layout=button_count&locale=ko_KR&sdk=joey&share=false&show_faces=false&size=small">
                                 <span style="vertical-align: bottom; width: 92px; height: 20px;"></span>
