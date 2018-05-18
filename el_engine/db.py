@@ -98,3 +98,15 @@ class PostgreSQL:
             return [False, data]
         except Exception as ex:
             return [ex, None]
+
+    def loginAccount(self, id, pw):
+        try:
+            conn = self.getConn()
+            cur = conn.cursor()
+
+            cur.execute("SELECT users.nickname, users.email_verified FROM users WHERE id = '{}' and password = '{}';".format(id, pw))
+            data = cur.fetchall()
+
+            return [False, data]
+        except Exception as ex:
+            return [ex, None]
