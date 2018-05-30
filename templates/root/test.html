@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>toast WYSIWYG test</title>
+        
+        <link rel="stylesheet" type="text/css" href="tui.editor-1.1.1/dist/tui-editor.css">
+        <link rel="stylesheet" type="text/css" href="tui.editor-1.1.1/dist/tui-editor-contents.css">
+        <script>
+            require('codemirror/lib/codemirror.css') // codemirror
+            require('tui-editor/dist/tui-editor.css'); // editor ui
+            require('tui-editor/dist/tui-editor-contents.css'); // editor content
+            require('highlight.js/styles/github.css'); // code block highlight
+        </script>
+    </head>
+    <body>
+        <div id = "editSection">
+            <script>
+                $('#editSection').tuiEditor({
+                initialEditType: 'markdown',
+                previewStyle: 'vertical',
+                height: 400
+            });
+            </script>
+        </div>
+    </body>
+</html>
