@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>toast WYSIWYG test</title>
-        
+
+        <script src="https://uicdn.toast.com/tui-auto-complete/latest/tui-auto-complete.js"></script>
         <link rel="stylesheet" type="text/css" href="tui.editor-1.1.1/dist/tui-editor.css">
         <link rel="stylesheet" type="text/css" href="tui.editor-1.1.1/dist/tui-editor-contents.css">
         <script>
@@ -11,17 +12,26 @@
             require('tui-editor/dist/tui-editor.css'); // editor ui
             require('tui-editor/dist/tui-editor-contents.css'); // editor content
             require('highlight.js/styles/github.css'); // code block highlight
+
+            $('#editSection').tuiEditor({
+                initialEditType: 'markdown',
+                previewStyle: 'vertical',
+                height: 300,
+                exts: ['colorSyntax'],
+                contentCSSStyles: [
+                    '~/tui.editor-1.1.1/dist/tui-editor-contents.css'
+                ],
+                events: {
+                    'load': function() {
+                        console.log('editor Loaded');
+                    }
+                }
+            });
         </script>
     </head>
     <body>
         <div id = "editSection">
-            <script>
-                $('#editSection').tuiEditor({
-                initialEditType: 'markdown',
-                previewStyle: 'vertical',
-                height: 400
-            });
-            </script>
+
         </div>
     </body>
 </html>

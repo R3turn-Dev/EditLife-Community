@@ -9,7 +9,7 @@
 
 Main module
 
-+ FrontEnd = [MaseKor](https://github.com/MaseKor)
++ FrontEnd = [MaseKor](https://github.com/MaseKor) (a.k.a MASE)
 + BackEnd = [Return0927](https://github.com/return0927) (a.k.a R3turn0927, R3turn-Dev)
 
 ## Browser Support
