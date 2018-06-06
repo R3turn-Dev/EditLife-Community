@@ -72,6 +72,101 @@
                 </div>
             </div>
         </div>
+        <div class="global-body">
+            <div class="body">
+                <div class="wrapper">
+                    <div class="left-wing">
+                        <ul class="left-menu">
+                            <li><a>총맞은것처럼</a></li>
+                            <li><a>우리</a></li>
+                            <li><a>가슴이너무 아파</a></li>
+                            <li><a>개발한것처럼</a></li>
+                            <li><a>어찌이리 가슴아픈지</a></li>
+<!--                            요기 개발해야함-->
+                        </ul>
+                    </div>
+                    <div class="content-body">
+                        <div class="layout-main">
+                            <div class="panel">
+                                <div class="author-wrap">
+                                    <div class="global-avatar-wrap">
+                                        <div class="avatar-border gold">
+                                            <img class="avatar" src="http://cfile9.uf.tistory.com/image/233F604857F3ACD6208420" width="40" height="40">
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <a class="nickname" href="http://www.naver.com">
+                                            <span style="color: rgba(187,167,87,.9);">수지</span>
+                                        </a>
+                                    </p>
+                                    <dl>
+                                        <dt>2018-06-06 20:24:01</dt>
+                                        <dt>조회수 30</dt>
+                                        <dt class="like-count">
+                                            13
+                                        </dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-wing">
+                        <div class="member-box">
+                            <div class="member-anonymous">
+                                <a class="register">Edit Life <strong>{{ board['members'] + 1 }}</strong>번째 회원가입</a>
+                                <a class="login" href="/login">
+                                    <strong>
+                                        Edit Life
+                                    </strong>
+                                    로그인
+                                </a>
+                            </div>
+                        </div>
+                        <div class="recommend-post">
+                            <div class="panel">
+                                <div class="panel-head">
+                                    <div class="block block bleu_de_france">
+                                        <h3>댓글이 많은 글</h3>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="simple">
+                                        {% for title, board, no, comments in board['most_comments'] %}
+                                        <li><a class="title" href="{{ 'bbs/{}/{}'.format(board, no) }}">{{ title }}<span>{{ comments }}</span></a></li>
+                                        {% endfor %}
+                                        <!-- <li><a class="title">하기싫습니다.<span>123</span></a></li>-->
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-wrap">
+                            <div class="ad">
+                                <a>AD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="w1000">
+                <dl class="links">
+                    <dt><a href="https://discord.gg/eJVytb5"><h5>DISCORD</h5>is our club</a></dt>
+                    <dt><a href="https://tgd.kr/"><h5>트게더</h5>트수들</a></dt>
+                </dl>
+                <ul class="footer-menu">
+                    <li><a>이용약관</a></li>
+                    <li><a>개인정보 취급방침</a></li>
+                    <li><a>청소년 보호정책</a></li>
+                    <li><a>이메일 주소 무단 수집 거부</a></li>
+                    <li><a>고객센터</a></li>
+                </ul>
+            </div>
+            <p class="company-info"> 대표이사 : 삼만원 / 주소 : http://127.0.0.1 / 전화번호 : 010-1234-5678</p>
+            <p class="copyright">© 2018-2018 </p>
+        </div>
+
     </body>
 
 </html>
