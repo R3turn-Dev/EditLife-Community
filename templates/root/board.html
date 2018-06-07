@@ -113,7 +113,7 @@
                                     </h1>
                                     <div class="canonical">
                                         게시글 주소 : 
-                                        <a>http://www.naver.com</a>
+                                        <a href="http://www.naver.com" target="_blank">http://www.naver.com</a>
                                     </div>
                                 </div>
                                 <div class="content-wrap">
@@ -187,7 +187,7 @@ Quisque sit amet varius est. Nam eget libero eu augue euismod ullamcorper interd
                                             <div class="comment-box">
                                                 <div class="depth">
                                                     <div class="global-avatar-wrap">
-                                                        <div class="avatar-border-silver">
+                                                        <div class="avatar-border-red">
                                                             <img class="avatar round" src="http://cfile9.uf.tistory.com/image/233F604857F3ACD6208420">
                                                         </div>
                                                     </div>
@@ -203,8 +203,64 @@ Quisque sit amet varius est. Nam eget libero eu augue euismod ullamcorper interd
                                                         </div>
                                                     </div>
                                                     <div class="comment-action">
-                                                        
+                                                        <a class="comment-like">
+                                                            좋아요
+                                                            <em class="count">0</em>
+                                                        </a>
+                                                        <a>답글 달기</a>
+                                                        <a>신고</a>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="comment" id="">
+                                            <div class="comment-box">
+                                                <div class="depth">
+                                                    <div class="global-avatar-wrap">
+                                                        <div class="avatar-border-silver">
+                                                            <img class="avatar round" src="http://mblogthumb3.phinf.naver.net/MjAxODAxMjRfNjAg/MDAxNTE2NzU4NDA0ODMw.5Cm2b27f7DZCpsMdWahoWmmc5HkiFRaMxgH6rJyCm28g.EDg309oOZ1l7am5V_90DoDo61hKJlwt60ZdjQHYNpMgg.JPEG.okn127/%E3%85%87%E3%85%80%E3%85%87%E3%85%8D.jpg?type=w800">
+                                                        </div>
+                                                    </div>
+                                                    <div class="meta-wrap">
+                                                        <a class="nickname" href="http://www.naver.com">
+                                                            <span style="color: black;">제니</span>
+                                                            1시간전
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment-content">
+                                                        <div class="comment-text">
+                                                            <p>ㅌㅔ스트 댓글 내용</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment-action">
+                                                        <a class="comment-like">
+                                                            좋아요
+                                                            <em class="count">0</em>
+                                                        </a>
+                                                        <a>답글 달기</a>
+                                                        <a>신고</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="layout-board-list">
+                                <div class="panel">
+                                    <ul class="post-list">
+                                        <li class="notice">
+                                            <div class="author">
+                                                <div class="author-text">
+                                                    <a class="nickname">
+                                                        <span style="color:black;">운영자</span>
+                                                    </a>
+                                                </div>
+                                                <div class="list-text">
+                                                    <p class="title">
+                                                        <a class="tag" href="">#공지</a>
+                                                        <a class="">asdfasdf</a>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </li>
@@ -237,8 +293,6 @@ Quisque sit amet varius est. Nam eget libero eu augue euismod ullamcorper interd
                                         {% for title, board, no, comments in board['most_comments'] %}
                                         <li><a class="title" href="{{ 'bbs/{}/{}'.format(board, no) }}">{{ title }}<span>{{ comments }}</span></a></li>
                                         {% endfor %}
-                                        <!-- <li><a class="title">하기싫습니다.<span>123</span></a></li>-->
-
                                     </ul>
                                 </div>
                             </div>

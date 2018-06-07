@@ -750,12 +750,22 @@ input, select, button, textarea{
     display: block;
     position: relative;
 }
-.panel .comment-wrap .comment-list>li comment-box{
+.panel .comment-wrap .comment-list>li .comment-box{
     padding: 10px 15px 10px 65px;
 }
 .panel .comment-wrap .comment-list>li .depth{
     position: relative;
     margin-left: 0px;
+}
+.panel .comment-wrap .comment-list>li .depth .global-avatar-wrap{
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+}
+.panel .comment-wrap .comment-list>li:nth-child(2n) {
+    background-color: #f7f9fa;
 }
 .panel .comment-wrap .comment-list>li .meta-wrap{
     color: gray;
@@ -767,4 +777,59 @@ input, select, button, textarea{
 }
 .panel .comment-wrap .comment-list>li .depth .comment-action{
     font-size: 0px;
+}
+.panel .comment-wrap .comment-list>li .depth .comment-action a{
+    font-size: 14px;
+    color: #444;
+}
+.panel .comment-wrap .comment-list>li .depth .comment-action a .count{
+    font-weight: 700;
+}
+.comment-wrap .comment-list>li .depth .comment-action a:after {
+    color: #999;
+    content: "\B7";
+    margin: 0 4px;
+}
+.comment-wrap .comment-list>li .depth .comment-action a:last-child:after {
+    content: "";
+}
+
+.post-list li .list-text .title {
+    color: #444;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.layout-board-list .post-list{
+    list-style: none;
+    line-height: 20px;
+}
+.layout-board-list .post-list li.notice{
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+}
+
+.layout-board-list .post-list li.notice .list-text{
+    margin-left: 0;
+}
+
+.layout-board-list .post-list li.notice .list-text .title{
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.layout-board-list .post-list li.notice .list-text .tag{
+    font-weight: 700;
+    color: #495baa;
+}
+
+.layout-board-list .post-list li .author{
+    float: right;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.layout-board-list .post-list li .author .author-text{
+    width: auto;
+    padding-left: 10px;
 }
