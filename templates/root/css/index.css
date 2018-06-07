@@ -608,24 +608,52 @@ input, select, button, textarea{
     height: 40px;
     overflow: hidden;
 }
-.avatar-border .gold{
+.avatar-border-gold{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 2px rgba(187,167,87,.9);
     z-index: 1;
     opacity: 1;
     animation: twinkle infinite 2s;
+    box-shadow: inset 0 0 0 2px rgba(187,167,87,.9)!important;
 }
+.avatar-border-silver{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 1;
+    animation: twinkle infinite 2s;
+    box-shadow: inset 0 0 0 2px silver!important;
+}
+.avatar-border-red{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 1;
+    animation: twinkle infinite 2s;
+    box-shadow: inset 0 0 0 2px red!important;
+}
+
 .avatar{
     position: relative;
     max-width: 100%;
     width: 100;
     height: 100;
     padding: 3px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 .nickname{
     font-weight: 700;
@@ -639,4 +667,104 @@ input, select, button, textarea{
 }
 .author-wrap dl dt.like-count{
     color: #00a473;
+}
+.title-wrap{
+    padding: 0 0 10px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.title-wrap h1.title{
+    color: #444;
+    font-size: 20px;
+    word-break: break-all;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.title-wrap .canonical{
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+}
+.content-wrap{
+    position: relative;
+    font-weight: 400;
+    line-height: 1.56;
+    padding: 20px 20px 120px;
+    font-size: 14px;
+    word-break: break-all;
+}
+.tag-wrap{
+    margin: 30px 0 10px;
+    padding: 0 15px;
+}
+.tag-wrap .tag-list{
+    list-style: none;
+    font-size: 0px;
+}
+
+.tag-wrap .tag-list li{
+    display: inline-block;
+    padding: 0 4px;
+    font-size: 12px;
+}
+
+.tag-wrap .tag-list li a{
+    color: #999;
+}
+
+.author-action-wrap{
+    margin: 10px 20px;
+    padding: 10px 2px;
+    border-top: .5px solid #eee;
+    border-bottom: .5px solid #eee; 
+}
+
+.author-action-wrap .send-memo{
+    line-height: 1.56;
+    font-size: 14px;
+    color: #444;
+}
+.author-action-wrap .recent-post{
+    margin-top: 10px;
+    line-height: 1.5;
+    list-style: none;
+}
+.author-action-wrap .recent-post .more{
+    color: gray;
+}
+.author-action-wrap .recent-post li .time{
+    float: right;
+    color: gray;
+    margin-left: 20px;
+}
+
+.panel .comment-wrap{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.panel .comment-wrap .comment-list{
+    list-style: none;
+}
+.panel .comment-wrap .comment-list>li{
+    display: block;
+    position: relative;
+}
+.panel .comment-wrap .comment-list>li comment-box{
+    padding: 10px 15px 10px 65px;
+}
+.panel .comment-wrap .comment-list>li .depth{
+    position: relative;
+    margin-left: 0px;
+}
+.panel .comment-wrap .comment-list>li .meta-wrap{
+    color: gray;
+}
+.panel .comment-wrap .comment-list>li .depth .comment-content{
+    margin: 8px 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.panel .comment-wrap .comment-list>li .depth .comment-action{
+    font-size: 0px;
 }
