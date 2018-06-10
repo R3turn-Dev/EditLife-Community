@@ -794,42 +794,53 @@ input, select, button, textarea{
     content: "";
 }
 
-.post-list li .list-text .title {
-    color: #444;
-    font-size: 14px;
-    font-weight: 700;
-}
-
 .layout-board-list .post-list{
     list-style: none;
     line-height: 20px;
 }
+
+.layout-board-list .post-list li{
+    display: block;
+    padding: 10px 12px;
+}
+.layout-board-list .post-list li:nth-child(2n){
+    background-color : #f7f9fa;
+}
+.layout-board-list .post-list li:after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .layout-board-list .post-list li.notice{
     border-bottom: 1px solid #f0f0f0;
-    background-color: #fff;
+    background-color: white;
 }
-
-.layout-board-list .post-list li.notice .list-text{
-    margin-left: 0;
-}
-
-.layout-board-list .post-list li.notice .list-text .title{
-    font-size: 13px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.layout-board-list .post-list li.notice .list-text .tag{
-    font-weight: 700;
-    color: #495baa;
-}
-
 .layout-board-list .post-list li .author{
     float: right;
     text-align: right;
     white-space: nowrap;
     overflow: hidden;
 }
-.layout-board-list .post-list li .author .author-text{
+
+.layout-board-list .post-list li.notice .author .author-text{
     width: auto;
     padding-left: 10px;
+}
+
+.layout-board-list .post-list li.notice .list-text{
+    margin-right: 0px;
+}
+.layout-board-list .post-list li.notice .list-text .title{
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.layout-board-list .post-list li .list-text .title a{
+    padding-right: 10px;
+}
+
+.layout-board-list .post-list li.notice .list-text .tag{
+    font-weight: 700;
+    color: #495baa;
 }
