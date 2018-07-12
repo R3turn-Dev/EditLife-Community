@@ -1,367 +1,274 @@
-body{
-    position: relative;
-    text-size-adjust: none;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 12px;
-    background-color: #f2f4f8;
-    
-}
-
-col{
-    display: table-column;
-}
-colgroup{
-    display: table-column-group;
-}
-
-div{
-    display: block;
-}
-
-form {
-    display: block;
-    
-}
-strong {
-    font-weight: 500;
-}
-table{
-    background-color: transparent;
-    border-collapse: collapse;
-}
-thead {
-    display: table-header-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-tbody{
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-
-tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
-
-p {
-    margin: 0 0 10px;
-}
-
-.layout-login, .layout-register{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.layout-login .bg, .layout-register .bg{
-    position: relative;
-    background: linear-gradient(135deg, #688fed 0%, #475ca9 45%, #688fed 100%);
-    padding: 40px 20px 60px;
-}
-
-.layout-register .bg h1{
-    font-size: 24px;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-    margin: 20px 0;
-    word-break: keep-all;
-    word-wrap: break-word;
-}
-
-
-.container{
-    position: relative;
-    width: 768;
-    min-width: 600;
-    margin: 0 auto;
-}
-.join-content{
-    width: 800px !important;
-    margin: 0 auto !important;
-}
-.join-form{
-    
-}
-
-.terms{
-    margin-bottom: 20px;
-    border: solid 1px #dadada;
-    background-color: white;
-    padding-left: 15px;
-    padding-right:30px;
-}
-
-.form-title{
-    width: 80%
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    padding: 12px 0;
-    margin 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.form-terms{
-    width: 100;
-    height: 145px;
-    overflow-y: auto;
-    padding: 10px 15px;
-    background-color: #f0f0f0;
-    font-size: 14px;
-}
-.form-terms .terms-style .open{
-    width: 100;
-    height: 600px;
-    padding: 10px 15px;
-    background-color: #f0f0f0;
-    font-size: 14px;
-}
-.form-terms.open{
-    height: 600px;
-}
-.terms-style{
-    line-height: 1.4;
-}
-
-.terms-style h3{
-    margin: 20px 0 10px;
-    color: black;
-    font-weight: normal;
-    font-size: 15px;
-}
-
-.form-agree{
-    text-align: right;
-    color: #516B82;
-    padding: 15px 0;
-}
-label span.checkbox{
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-    left: 0;
-    background-color: #F1F1F1;
-    border: 1px solid #ccc;
-}
-
-label span.checkbox:after{
-    content: "";
-    width: 8px;
-    height: 5px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    border: 2px solid #666;
-    border-top: none;
-    border-right: none;
-    background: transparent;
-    opacity: .15;
-    transform: rotate(-45deg);
-}
-
-.form-table{
-    overflow-x: auto;
-    width: 100%;
-    font-size: 13px;
-}
-.form-table table{
-    width: 100%;
-}
-.form-table table.fix{
-    margin: 0 0 15px 0;
-}
-
-.form-table th, .form-table td{
-    border: 1px solid #ddd;
-    padding: 7px 15px;
-}
-
-.form-table th{
-    background-color: #f1f1f1;
-    text-align:left;
-}
-.form-table td.left{
-    text-align-last: left;
-}
-.terms-style ul.b{
-    list-style-type: disc;
-    margin-bottom: 20px;
-}
-.terms-style ul li{
-    margin: 5px 0;
-    font-size: 13px;
-}
-.terms_style p {
-    color: #666;
-    font-size: 13px;
-    text-align: justify;
-}
-
-.form-button{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    padding: 15px 0;
-    border-top: 1px solid #666;
-}
-
-.form-button .button-agree{
-    background-color: #688fed;
-        font-size: 16px;
-    color: #fff;
-    margin: 0 3px;
-    padding: 10px 20px;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-.form-button .button-cancel{
-    background-color: white;
-        font-size: 16px;
-    color: balck;
-    margin: 0 3px;
-    padding: 10px 20px;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-.form-open{
-    display: block;
-    widows: 100%;
-    font-size: 11px;
-    color: #999;
-    text-align:center;
-    padding: 5px 15px;
-    border: 1px solid #f1f1f1;
-}
-.form-open:before{
-    content: "";
-    font-size: 12px;
-    margin: 0 3px 0 0;
-}
-.form-open:after{
-    content: "펼치기";
-}
-.form-open:hover{
-    cursor: pointer;
-}
-.open{
-    height: auto;
-}
-.close{
-    
-}
-.form-open.close:after{
-    content: "접기";
-}
-.register-tapmenu{
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0 0;
-    border-bottom: 1px solid #666;
-}
-.register-tapmenu .register-tap{
-    width: 25%;
-    font-size: 14px;
-    color: #999;
-    text-align: center;
-    padding: 15px 0; 
-}
-.register-tapmenu .register-tap span{
-    font-size: 12px;
-    opacity: .7;
-    padding: 0 5px 0 0;
-}
-.register-tapmenu .register-tap.current{
-    color: #fff;
-    background-color: #666;
-}
-.form-title{
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    padding: 12px 0;
-    margin: 10px 0 0;
-    border-bottom: 1px solid #ccc;
-}
-.form-title .title-tiny{
-    position: relative;
-    top: -1px;
-    font-size: 12px;
-    color: #FF5722;
-    padding: 0 0 0 5px;
-}
-.form{
-    padding: 20px 10px;
-    border: 1px solid #ddd;
-}
-.form.topline{
-    border-top: 0;
-}
-table{
-    background-color: transparent;
-    border-collapse: collapse;
-}
-tbody{
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 form{
-    display: block;
-    margin-top: 0em;
+    display: inline;
 }
-.form table{
-    width: 100%;
+
+ol,ul{
+    list-style: none;
 }
-.form th, .form td {
-    color: #333;
-    vertical-align: top;
-}
-.form th {
-    width: auto;
-    height: 50px;
-    font-weight: 500;
-    text-align: right;
-    padding: 9px 10px;
-}
-.form td {
-    width: auto;
-    text-align: left;
-    padding: 0 0 10px;
-}
-.form input[type="text"], .form input[type="password"], .form input[type="tel"], .form input[type="email"], .form input[type="url"], .form input[type="search"] {
-    width: 100%;
-    max-width: 200px;
-    color: #333;
-    padding: 7px 10px;
-}
-label{
+.wrapper{
     position: relative;
+    width: 1200px;
+    margin: 0 auto;
 }
-.tip{
+.wrapper:after{
+    content: "";
     display: block;
+    clear: both;
+}
+
+.global-top {
+    background-color: white;
+    top: 70px;
+    left: 0;
+    right: 0;
+    min-width: 1280;
+    z-index: 500;
+}
+
+.global-top .header{
+    background-color: white;
+    border-bottom: 2px solid #FFEB46;
+    padding-bottom: 20px;
+}
+
+.global-top .header .top-menu-wrap .right-menu{
+    float: right;
+    text-align: right;
+    margin-left: 15px;
+    font-size: 0px;
+}
+.global-top .header .top-menu-wrap .right-menu li{
+    display: inline-block;
+}
+.global-top .header .top-menu-wrap .right-menu li:after{
+    display: inline-block;
+    content: "|";
+    padding: 0 8px;
     font-size: 12px;
-    color: #D43F3A;
-    line-height: 1.4;
-    margin: 10px 0 15px;
+    color: #eee;
 }
-.form .tip{
-    color: #999;
+.global-top .header .top-menu-wrap .right-menu li:last-child:after {
+    content: "";
 }
-.form .agree{
+
+.global-top .header .top-menu-wrap .right-menu li a{
+    font-size: 12px;
+    line-height: 40px;
+    color: black;
+}
+
+
+.global-top .header .top-menu-wrap .left-menu{
+    float: right;
+    line-height: 30px;
+}
+.global-top .header .top-menu-wrap .left-menu span {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    padding-right: 10px;
+}
+
+.global-top .header .top-menu-wrap:after, .global-top .header:after{
+    content: "";
     display: block;
-    padding: 0 0 10px 0;
+    clear: both;
 }
-]
+
+.global-top .header .logo-wrap{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.global-top .header .logo-wrap a{
+    display: block;
+}
+
+.global-top .header .logo-wrap a img{
+    width: 190px;
+}
+
+.global-top .header .search-wrap{
+    position: absolute;
+    bottom: 10px;
+    left: 240px;
+    width: 240px;
+}
+
+.global-top .header .search-wrap .search{
+    position: relative;
+    border: 1px solid #eee;
+}
+.global-top .header .search-wrap .search .fa{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    color: #495baa;
+    font-size: 16px;
+    padding: 0 8px;
+    cursor: pointer;
+    line-height: 34px;
+}
+
+.global-top .header .search-wrap .search .search-input{
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 8px 40px 8px 16px;
+    height: 32px;
+    font-size: 14px;
+    color: black;
+}
+
+.global-top .header .header-menu-bar{
+    list-style: none;
+    float: right;
+    overflow: hidden;
+    height: 40px;
+    font-size: 0px;
+}
+
+.global-top .header .header-menu-bar li{
+    display: inline-block;
+}
+
+.global-top .header .header-menu-bar li a{
+    display: block;
+    padding: 12px 6px;
+    font-size: 15px;
+    font-weight: 900;
+    color: black;
+    letter-spacing: -1px;
+}
+
+.footer{
+    text-align: center;
+    background-color: #111a23;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer .w1000{
+    font-size: 11px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.footer .links{
+    margin-bottom: 20px;
+}
+
+.footer .links dt{
+    text-align: left;
+    display: inline-block;
+}
+
+.footer .links dt a{
+    display: block;
+    color: #999;
+    padding: 0 20px;
+}
+.footer .links dt a h5{
+    color: #ddd;
+    font-size: 12px;
+    font-weight: 400;
+}
+.footer .footer-menu{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.footer .footer-menu li{
+    font-size: 12px;
+    display: inline-block;
+}
+.footer .footer-menu li a{
+    display: inline-block;
+    padding: 4px 0;
+    color: #ccc;
+}
+
+.footer .footer-menu li a:after{
+    content: "|";
+    padding: 0 6px;
+    color: #666;
+}
+.footer .footer-menu li a:after:last-child {
+    content: "";
+}
+.footer .company-info{
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.global-body{
+    margin-top: 20px;
+}
+
+.wrap{
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-member-join h2{
+    background-color: #202222;
+    font-weight: 500;
+    font-size: 13pt;
+    color: white;
+    padding: 19px 33px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.page-member-join h2 a{
+    float: right;
+    font-size: 15px;
+    font-weight: normal;
+    color: #c4c4c4;
+}
+.page-member-join .box{
+    padding: 40px 55px 55px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.page-member-join .box h3{
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 42px;
+}
+
+
+.page-member-join .agreement ul>li{
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    widows: calc(50% + 0px - 10px);
+}
+
+.page-member-join .agreement ul>li:nth-child(2n+1){
+    margin-left: 0px;
+}
+
+.page-member-join .agreement ul li div{
+    padding: 20px;
+    font-size: 13px;
+    overflow: auto;
+    height: 220px;
+    text-align: left;
+    line-height:  140%;
+    border: 1px solid #c4c4c4;
+    background-color: white;
+}
